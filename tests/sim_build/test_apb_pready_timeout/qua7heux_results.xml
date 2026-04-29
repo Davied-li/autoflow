@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777366095" />
+    <testcase classname="test_soc_system" file="/home/jjt/projects/AutoFlow2/tests/test_soc_system.py" lineno="385" name="test_apb_pready_timeout" ratio_time="27164.850740547776" sim_time_ns="450.001" time="0.016565561294555664" />
+  </testsuite>
+</testsuites>

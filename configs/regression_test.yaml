@@ -1,0 +1,22 @@
+# configs/regression_test.yaml
+
+global_switches:
+  log_level: "INFO"
+  dump_waveform: true     # 开启后，引擎会自动在运行命令加上 +fsdb+autoflush
+  simulator: "vcs"        # 🚨 已经改回 vcs，配合我们的终极适配器
+
+simulation_config:
+  rtl_paths:
+    - "rtl/apb_sram.v"    # 指向咱们刚刚造的那个替身 RTL 文件
+  compile_options: "-full64 -sverilog +v2k -timescale=1ns/1ps"
+  top_module: "apb_sram"  # 🚨 必须和替身 RTL 里面的 module 名字保持一致
+
+test_configuration:
+  timeout: 3600           # 全局超时时间 (秒)，防死锁
+  testcases:
+    - name: "apb_sram_basic_rw"
+      module: "test_apb_sram"    # 指向 tests/test_apb_sram.py
+      seeds: [1234, 5678]        # 引擎会为这个用例循环跑 2 次
+    - name: "apb_sram_burst_err"
+      module: "test_apb_error"   # 指向 tests/test_apb_error.py
+      seeds: [9012]              # 引擎会为这个用例跑 1 次

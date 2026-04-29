@@ -1,0 +1,96 @@
+[32mINFO    [0m cocotb:simulator.py:256 Running command: vcs -full64 -debug +vpi -P pli.tab -sverilog +define+COCOTB_SIM=1 -load /home/jjt/.local/lib/python3.6/site-packages/cocotb/libs/libcocotbvpi_vcs.so -timescale=1ns/1ps -debug_access+all /home/jjt/projects/AutoFlow2/rtl/axi_lite_to_apb_bridge.v /home/jjt/projects/AutoFlow2/rtl/apb_sram.v /home/jjt/projects/AutoFlow2/rtl/soc_system_top.v
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[DEBUG_DEP] Option will be deprecated
+[32mINFO    [0m cocotb:simulator.py:267   The option '-debug' will be deprecated in a future release.  Please use
+[32mINFO    [0m cocotb:simulator.py:267   '-debug_acc+pp+f+dmptf -debug_region+cell+encrypt' instead.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[DBGACC_DBG] Multiple debug options being used
+[32mINFO    [0m cocotb:simulator.py:267   The debug switches '-debug_access' and '-debug*' are being used together.
+[32mINFO    [0m cocotb:simulator.py:267   For better performance, consider using only '-debug_access'.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267                          Chronologic VCS (TM)
+[32mINFO    [0m cocotb:simulator.py:267          Version T-2022.06_Full64 -- Tue Apr 28 16:46:42 2026
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267                     Copyright (c) 1991 - 2022 Synopsys, Inc.
+[32mINFO    [0m cocotb:simulator.py:267    This software and the associated documentation are proprietary to Synopsys,
+[32mINFO    [0m cocotb:simulator.py:267  Inc. This software may only be used in accordance with the terms and conditions
+[32mINFO    [0m cocotb:simulator.py:267  of a written license agreement with Synopsys, Inc. All other use, reproduction,
+[32mINFO    [0m cocotb:simulator.py:267    or distribution of this software is strictly prohibited.  Licensed Products
+[32mINFO    [0m cocotb:simulator.py:267      communicate with Synopsys servers for the purpose of providing software
+[32mINFO    [0m cocotb:simulator.py:267     updates, detecting software piracy and verifying that customers are using
+[32mINFO    [0m cocotb:simulator.py:267     Licensed Products in conformity with the applicable License Key for such
+[32mINFO    [0m cocotb:simulator.py:267   Licensed Products. Synopsys will use information gathered in connection with
+[32mINFO    [0m cocotb:simulator.py:267     this process to deliver software updates and pursue software pirates and
+[32mINFO    [0m cocotb:simulator.py:267                                    infringers.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267  Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+[32mINFO    [0m cocotb:simulator.py:267             Inclusivity and Diversity" (Refer to article 000036315 at
+[32mINFO    [0m cocotb:simulator.py:267                         https://solvnetplus.synopsys.com)
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:78   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[VPI-CT-NS] VPI function is not supported
+[32mINFO    [0m cocotb:simulator.py:267   The VPI function 'vpi_register_cb' is not supported in the compiler.
+[32mINFO    [0m cocotb:simulator.py:267   Please fix the code being referred to by the '-load' compile option.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns ERROR    gpi                                ..b/vpi/VpiCbHdl.cpp:74   in arm_callback                    VPI: Unable to register a callback handle for VPI type cbStartOfSimulation(11)
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[VPI-CT-NS] VPI function is not supported
+[32mINFO    [0m cocotb:simulator.py:267   The VPI function 'vpi_chk_error' is not supported in the compiler.
+[32mINFO    [0m cocotb:simulator.py:267   Please fix the code being referred to by the '-load' compile option.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[VPI-CT-NS] VPI function is not supported
+[32mINFO    [0m cocotb:simulator.py:267   The VPI function 'vpi_register_cb' is not supported in the compiler.
+[32mINFO    [0m cocotb:simulator.py:267   Please fix the code being referred to by the '-load' compile option.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns ERROR    gpi                                ..b/vpi/VpiCbHdl.cpp:74   in arm_callback                    VPI: Unable to register a callback handle for VPI type cbEndOfSimulation(12)
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[VPI-CT-NS] VPI function is not supported
+[32mINFO    [0m cocotb:simulator.py:267   The VPI function 'vpi_chk_error' is not supported in the compiler.
+[32mINFO    [0m cocotb:simulator.py:267   Please fix the code being referred to by the '-load' compile option.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Parsing design file '/home/jjt/projects/AutoFlow2/rtl/axi_lite_to_apb_bridge.v'
+[32mINFO    [0m cocotb:simulator.py:267 Parsing design file '/home/jjt/projects/AutoFlow2/rtl/apb_sram.v'
+[32mINFO    [0m cocotb:simulator.py:267 Parsing design file '/home/jjt/projects/AutoFlow2/rtl/soc_system_top.v'
+[32mINFO    [0m cocotb:simulator.py:267 Top Level Modules:
+[32mINFO    [0m cocotb:simulator.py:267        soc_system_top
+[32mINFO    [0m cocotb:simulator.py:267 TimeScale is 1 ns / 1 ps
+[32mINFO    [0m cocotb:simulator.py:267 Starting vcs inline pass...
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 1 module and 0 UDP read.
+[32mINFO    [0m cocotb:simulator.py:267 recompiling module soc_system_top
+[32mINFO    [0m cocotb:simulator.py:267 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+[32mINFO    [0m cocotb:simulator.py:267 if [ -x ../simv ]; then chmod a-x ../simv; fi
+[32mINFO    [0m cocotb:simulator.py:267 g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/home/jjt/install/synopsys/vcs/vcs/T-2022.06/linux64/lib -L/home/jjt/install/synopsys/vcs/vcs/T-2022.06/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _5030_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /home/jjt/install/synopsys/vcs/vcs/T-2022.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /home/jjt/install/synopsys/vcs/vcs/T-2022.06/linux64/lib/vcs_save_restore_new.o /home/jjt/install/synopsys/verdi/verdi/T-2022.06/share/PLI/VCS/LINUX64/pli.a -ldl -lm  -lc -lpthread -ldl
+[32mINFO    [0m cocotb:simulator.py:267 ../simv up to date
+[32mINFO    [0m cocotb:simulator.py:267 CPU time: .410 seconds to compile + .301 seconds to elab + .249 seconds to link
+[32mINFO    [0m cocotb:simulator.py:256 Running command: /home/jjt/projects/AutoFlow2/tests/sim_build/test_incr_burst/simv +define+COCOTB_SIM=1
+[32mINFO    [0m cocotb:simulator.py:267 Chronologic VCS simulator copyright 1991-2022
+[32mINFO    [0m cocotb:simulator.py:267 Contains Synopsys proprietary information.
+[32mINFO    [0m cocotb:simulator.py:267 Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Apr 28 16:46 2026
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:78   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+[32mINFO    [0m cocotb:simulator.py:267      0.00ns INFO     cocotb                             Running on Chronologic Simulation VCS Release version T-2022.06_Full64
+[32mINFO    [0m cocotb:simulator.py:267      0.00ns INFO     cocotb                             Running tests with cocotb v1.7.1 from /home/jjt/.local/lib/python3.6/site-packages/cocotb
+[32mINFO    [0m cocotb:simulator.py:267      0.00ns INFO     cocotb                             Seeding Python random module with 1777366026
+[32mINFO    [0m cocotb:simulator.py:267      0.00ns INFO     cocotb.regression                  Found test test_soc_system.test_incr_burst
+[32mINFO    [0m cocotb:simulator.py:267     40.00ns INFO     cocotb.soc_system_top              Initiating INCR Burst Write of length 4 at Addr=0x00001008
+[32mINFO    [0m cocotb:simulator.py:267    190.00ns INFO     cocotb.soc_system_top              Initiating INCR Burst Read
+[32mINFO    [0m cocotb:simulator.py:267    330.00ns INFO     cocotb.soc_system_top              INCR Burst verification passed completely
+[32mINFO    [0m cocotb:simulator.py:267    330.00ns INFO     cocotb.regression                  test_incr_burst passed
+[32mINFO    [0m cocotb:simulator.py:267    330.00ns INFO     cocotb.regression                  *****************************************************************************************
+[32mINFO    [0m cocotb:simulator.py:267                                                         ** TEST                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+[32mINFO    [0m cocotb:simulator.py:267                                                         *****************************************************************************************
+[32mINFO    [0m cocotb:simulator.py:267                                                         ** test_soc_system.test_incr_burst   PASS         330.00           0.02      21903.82  **
+[32mINFO    [0m cocotb:simulator.py:267                                                         *****************************************************************************************
+[32mINFO    [0m cocotb:simulator.py:267                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                   330.00           0.16       2101.55  **
+[32mINFO    [0m cocotb:simulator.py:267                                                         *****************************************************************************************
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 $finish at simulation time               330001
+[32mINFO    [0m cocotb:simulator.py:267            V C S   S i m u l a t i o n   R e p o r t
+[32mINFO    [0m cocotb:simulator.py:267 Time: 330001 ps
+[32mINFO    [0m cocotb:simulator.py:267 CPU Time:      0.460 seconds;       Data structure size:   8.0Mb
+[32mINFO    [0m cocotb:simulator.py:267 Tue Apr 28 16:47:06 2026

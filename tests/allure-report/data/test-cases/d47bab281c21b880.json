@@ -1,0 +1,81 @@
+{
+  "uid" : "d47bab281c21b880",
+  "name" : "Project Overview - AutoFlow AXI-APB Bridge Verification",
+  "fullName" : "test_project_overview#test_project_overview",
+  "historyId" : "46107862861f2b02ee63f32f26bf06a4",
+  "time" : {
+    "start" : 1777365974391,
+    "stop" : 1777365974392,
+    "duration" : 1
+  },
+  "description" : "\n    项目总览页：\n    用于在 Allure 报告中展示 AutoFlow 框架说明、验证范围和模块结构图。\n    ",
+  "descriptionHtml" : "<pre><code>项目总览页：\n用于在 Allure 报告中展示 AutoFlow 框架说明、验证范围和模块结构图。\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n    项目总览页：\n    用于在 Allure 报告中展示 AutoFlow 框架说明、验证范围和模块结构图。\n    ",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "49953c445c3922eb",
+      "name" : "AutoFlow Project Summary",
+      "source" : "49953c445c3922eb.txt",
+      "type" : "text/plain",
+      "size" : 881
+    }, {
+      "uid" : "28b5b94ad7774a37",
+      "name" : "Module Diagram - AXI-APB Bridge",
+      "source" : "28b5b94ad7774a37.svg",
+      "type" : "image/svg-xml",
+      "size" : 4463
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "AXI-APB Bridge Verification Framework"
+  }, {
+    "name" : "feature",
+    "value" : "AutoFlow Project Overview"
+  }, {
+    "name" : "suite",
+    "value" : "test_project_overview"
+  }, {
+    "name" : "host",
+    "value" : "localhost.localdomain"
+  }, {
+    "name" : "thread",
+    "value" : "3427-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_project_overview"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d47bab281c21b880.json",
+  "parameterValues" : [ ]
+}

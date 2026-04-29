@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777366037" />
+    <testcase classname="test_soc_system" file="/home/jjt/projects/AutoFlow2/tests/test_soc_system.py" lineno="281" name="test_multislave_decode" ratio_time="26745.179264360486" sim_time_ns="480.001" time="0.01794719696044922" />
+  </testsuite>
+</testsuites>

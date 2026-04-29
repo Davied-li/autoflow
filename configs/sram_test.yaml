@@ -1,0 +1,20 @@
+# configs/sram_test.yaml
+
+global_switches:
+  log_level: "INFO"
+  dump_waveform: false     # 开启波形导出，配合 TB 中的 $dumpfile 使用
+  simulator: "vcs"
+
+simulation_config:
+  rtl_paths:
+    - "rtl/apb_sram.v"    # SRAM 逻辑源码
+    - "tests/tb_apb_sram.sv" # 对应的标准测试平台
+  compile_options: "-full64 -sverilog +v2k -timescale=1ns/1ps"
+  top_module: "tb_apb_sram" # 仿真顶层模块名
+
+test_configuration:
+  timeout: 3600
+  testcases:
+    - name: "sram_basic_rw"  # 对应 TB 中 if (testcase == "sram_basic_rw")
+      module: "dummy"        # 目前跑 SV，此项作为占位符
+      seeds: [1234, 5678]    # 跑两个随机种子，确保稳定性

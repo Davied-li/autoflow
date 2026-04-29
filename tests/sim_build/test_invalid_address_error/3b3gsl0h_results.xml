@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777366049" />
+    <testcase classname="test_soc_system" file="/home/jjt/projects/AutoFlow2/tests/test_soc_system.py" lineno="313" name="test_invalid_address_error" ratio_time="12021.320650218539" sim_time_ns="120.001" time="0.00998234748840332" />
+  </testsuite>
+</testsuites>

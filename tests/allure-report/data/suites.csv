@@ -1,0 +1,82 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Apr 28 16:48:15 CST 2026","Tue Apr 28 16:48:33 CST 2026","17854","","test_runner","","","","test_soc_bridge[test_random_burst_stress]","
+    AutoFlow AXI-APB Bridge 自动化回归入口。
+
+    功能：
+    1. pytest 参数化调度 testcase；
+    2. cocotb-test 调用 VCS 仿真；
+    3. 每个 testcase 使用独立 sim_build；
+    4. 自动归档 VCD 波形；
+    5. 自动生成 SVG 波形图；
+    6. 自动挂载模块结构图到 Allure 报告。
+    "
+"passed","Tue Apr 28 16:47:57 CST 2026","Tue Apr 28 16:48:15 CST 2026","17760","","test_runner","","","","test_soc_bridge[test_apb_pready_timeout]","
+    AutoFlow AXI-APB Bridge 自动化回归入口。
+
+    功能：
+    1. pytest 参数化调度 testcase；
+    2. cocotb-test 调用 VCS 仿真；
+    3. 每个 testcase 使用独立 sim_build；
+    4. 自动归档 VCD 波形；
+    5. 自动生成 SVG 波形图；
+    6. 自动挂载模块结构图到 Allure 报告。
+    "
+"passed","Tue Apr 28 16:46:14 CST 2026","Tue Apr 28 16:46:14 CST 2026","1","","test_project_overview","","","","Project Overview - AutoFlow AXI-APB Bridge Verification","
+    项目总览页：
+    用于在 Allure 报告中展示 AutoFlow 框架说明、验证范围和模块结构图。
+    "
+"passed","Tue Apr 28 16:46:41 CST 2026","Tue Apr 28 16:47:06 CST 2026","24362","","test_runner","","","","test_soc_bridge[test_incr_burst]","
+    AutoFlow AXI-APB Bridge 自动化回归入口。
+
+    功能：
+    1. pytest 参数化调度 testcase；
+    2. cocotb-test 调用 VCS 仿真；
+    3. 每个 testcase 使用独立 sim_build；
+    4. 自动归档 VCD 波形；
+    5. 自动生成 SVG 波形图；
+    6. 自动挂载模块结构图到 Allure 报告。
+    "
+"passed","Tue Apr 28 16:47:06 CST 2026","Tue Apr 28 16:47:17 CST 2026","11183","","test_runner","","","","test_soc_bridge[test_multislave_decode]","
+    AutoFlow AXI-APB Bridge 自动化回归入口。
+
+    功能：
+    1. pytest 参数化调度 testcase；
+    2. cocotb-test 调用 VCS 仿真；
+    3. 每个 testcase 使用独立 sim_build；
+    4. 自动归档 VCD 波形；
+    5. 自动生成 SVG 波形图；
+    6. 自动挂载模块结构图到 Allure 报告。
+    "
+"passed","Tue Apr 28 16:47:17 CST 2026","Tue Apr 28 16:47:29 CST 2026","12310","","test_runner","","","","test_soc_bridge[test_invalid_address_error]","
+    AutoFlow AXI-APB Bridge 自动化回归入口。
+
+    功能：
+    1. pytest 参数化调度 testcase；
+    2. cocotb-test 调用 VCS 仿真；
+    3. 每个 testcase 使用独立 sim_build；
+    4. 自动归档 VCD 波形；
+    5. 自动生成 SVG 波形图；
+    6. 自动挂载模块结构图到 Allure 报告。
+    "
+"passed","Tue Apr 28 16:47:29 CST 2026","Tue Apr 28 16:47:57 CST 2026","27782","","test_runner","","","","test_soc_bridge[test_apb_pslverr_injection]","
+    AutoFlow AXI-APB Bridge 自动化回归入口。
+
+    功能：
+    1. pytest 参数化调度 testcase；
+    2. cocotb-test 调用 VCS 仿真；
+    3. 每个 testcase 使用独立 sim_build；
+    4. 自动归档 VCD 波形；
+    5. 自动生成 SVG 波形图；
+    6. 自动挂载模块结构图到 Allure 报告。
+    "
+"passed","Tue Apr 28 16:46:14 CST 2026","Tue Apr 28 16:46:41 CST 2026","27582","","test_runner","","","","test_soc_bridge[test_single_transfer]","
+    AutoFlow AXI-APB Bridge 自动化回归入口。
+
+    功能：
+    1. pytest 参数化调度 testcase；
+    2. cocotb-test 调用 VCS 仿真；
+    3. 每个 testcase 使用独立 sim_build；
+    4. 自动归档 VCD 波形；
+    5. 自动生成 SVG 波形图；
+    6. 自动挂载模块结构图到 Allure 报告。
+    "

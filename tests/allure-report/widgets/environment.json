@@ -1,0 +1,13 @@
+[ {
+  "values" : [ "Linux" ],
+  "name" : "OS"
+}, {
+  "values" : [ "Python 3.6.8" ],
+  "name" : "Python"
+}, {
+  "values" : [ "Synopsys_VCS" ],
+  "name" : "Simulator"
+}, {
+  "values" : [ "AutoFlow_Verification" ],
+  "name" : "Project"
+} ]

@@ -1,0 +1,22 @@
+# configs/adder_test.yaml
+global_switches:
+  log_level: "INFO"
+  dump_waveform: false 
+  simulator: "vcs"
+
+simulation_config:
+  rtl_paths:
+    - "rtl/adder.v"      # 真实的 RTL
+    - "tests/tb_adder.v"   # 真实的 Testbench
+  compile_options: "-full64 -sverilog +v2k -timescale=1ns/1ps"
+  top_module: "tb_adder" # 顶层模块变成了 TB
+
+test_configuration:
+  timeout: 3600
+  testcases:
+    - name: "adder_sanity_pass"   # 会进入 TB 里打印 [PASS] 的分支
+      module: "dummy"
+      seeds: [888]
+    - name: "adder_corner_fail"   # 会进入 TB 里打印 [FAIL] 的分支
+      module: "dummy"
+      seeds: [999]

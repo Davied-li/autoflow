@@ -1,0 +1,31 @@
+
+AutoFlow Verification Framework
+
+Project:
+AutoFlow is a Python-based RTL verification automation framework built with Pytest, Cocotb, Synopsys VCS, and Allure.
+
+DUT:
+AXI-APB Bridge with Multi-Slave APB subsystem.
+
+Main Capabilities:
+1. Pytest-based regression scheduling
+2. Cocotb-based AXI transaction driver
+3. Synopsys VCS simulation backend
+4. AXI single transfer and INCR burst verification
+5. Multi-Slave APB address decode verification
+6. Invalid address handling
+7. APB PSLVERR fault injection
+8. APB PREADY timeout verification
+9. Random burst stress test with fixed seed
+10. VCD waveform archive
+11. SVG waveform visualization
+12. Allure report generation
+
+Formal Regression Testcases:
+1. test_single_transfer
+2. test_incr_burst
+3. test_multislave_decode
+4. test_invalid_address_error
+5. test_apb_pslverr_injection
+6. test_apb_pready_timeout
+7. test_random_burst_stress

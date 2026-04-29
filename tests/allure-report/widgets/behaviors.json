@@ -1,0 +1,15 @@
+{
+  "total" : 8,
+  "items" : [ {
+    "uid" : "3598120ed189d97b55e18f011077c6d7",
+    "name" : "AutoFlow Project Overview",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}

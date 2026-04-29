@@ -1,0 +1,458 @@
+$date
+	Tue Apr 28 16:46:41 2026
+$end
+
+$version
+	Synopsys VCS version T-2022.06_Full64
+$end
+
+$timescale
+	1ps
+$end
+
+$comment Csum: 1 5f4c71699db24468 $end
+
+
+$scope module soc_system_top $end
+$var reg 1024 ! autoflow_wave_file [1023:0] $end
+$var wire 1 " clk $end
+$var wire 1 # rst_n $end
+$var wire 32 $ s_axi_awaddr [31:0] $end
+$var wire 3 % s_axi_awprot [2:0] $end
+$var wire 8 & s_axi_awlen [7:0] $end
+$var wire 3 ' s_axi_awsize [2:0] $end
+$var wire 2 ( s_axi_awburst [1:0] $end
+$var wire 1 ) s_axi_awvalid $end
+$var wire 1 * s_axi_awready $end
+$var wire 32 + s_axi_wdata [31:0] $end
+$var wire 4 , s_axi_wstrb [3:0] $end
+$var wire 1 - s_axi_wlast $end
+$var wire 1 . s_axi_wvalid $end
+$var wire 1 / s_axi_wready $end
+$var wire 2 0 s_axi_bresp [1:0] $end
+$var wire 1 1 s_axi_bvalid $end
+$var wire 1 2 s_axi_bready $end
+$var wire 32 3 s_axi_araddr [31:0] $end
+$var wire 3 4 s_axi_arprot [2:0] $end
+$var wire 8 5 s_axi_arlen [7:0] $end
+$var wire 3 6 s_axi_arsize [2:0] $end
+$var wire 2 7 s_axi_arburst [1:0] $end
+$var wire 1 8 s_axi_arvalid $end
+$var wire 1 9 s_axi_arready $end
+$var wire 32 : s_axi_rdata [31:0] $end
+$var wire 2 ; s_axi_rresp [1:0] $end
+$var wire 1 < s_axi_rlast $end
+$var wire 1 = s_axi_rvalid $end
+$var wire 1 > s_axi_rready $end
+$var wire 32 ? paddr [31:0] $end
+$var wire 3 @ pprot [2:0] $end
+$var wire 4 A psel [3:0] $end
+$var wire 1 B penable $end
+$var wire 1 C pwrite $end
+$var wire 32 D pwdata [31:0] $end
+$var wire 4 E pstrb [3:0] $end
+$var wire 32 F prdata_0 [31:0] $end
+$var wire 32 G prdata_1 [31:0] $end
+$var wire 32 H prdata_2 [31:0] $end
+$var wire 32 I prdata_3 [31:0] $end
+$var wire 1 J pready_0 $end
+$var wire 1 K pready_1 $end
+$var wire 1 L pready_2 $end
+$var wire 1 M pready_3 $end
+$var wire 1 N pslverr_0 $end
+$var wire 1 O pslverr_1 $end
+$var wire 1 P pslverr_2 $end
+$var wire 1 Q pslverr_3 $end
+$var wire 32 R prdata [31:0] $end
+$var wire 1 S pready $end
+$var wire 1 T pslverr $end
+
+$scope module u_bridge $end
+$var wire 1 " clk $end
+$var reg 1 U s_axi_bvalid $end
+$var wire 1 2 s_axi_bready $end
+$var reg 1 V s_axi_rvalid $end
+$var wire 1 > s_axi_rready $end
+$var reg 32 W paddr [31:0] $end
+$var reg 4 X psel [3:0] $end
+$var reg 1 Y penable $end
+$var reg 1 Z pwrite $end
+$var wire 1 S pready $end
+$var wire 1 # rst_n $end
+$var wire 32 $ s_axi_awaddr [31:0] $end
+$var wire 3 % s_axi_awprot [2:0] $end
+$var wire 8 & s_axi_awlen [7:0] $end
+$var wire 3 ' s_axi_awsize [2:0] $end
+$var wire 2 ( s_axi_awburst [1:0] $end
+$var wire 1 ) s_axi_awvalid $end
+$var reg 1 [ s_axi_awready $end
+$var wire 32 + s_axi_wdata [31:0] $end
+$var wire 4 , s_axi_wstrb [3:0] $end
+$var wire 1 - s_axi_wlast $end
+$var wire 1 . s_axi_wvalid $end
+$var reg 1 \ s_axi_wready $end
+$var reg 2 ] s_axi_bresp [1:0] $end
+$var wire 32 3 s_axi_araddr [31:0] $end
+$var wire 3 4 s_axi_arprot [2:0] $end
+$var wire 8 5 s_axi_arlen [7:0] $end
+$var wire 3 6 s_axi_arsize [2:0] $end
+$var wire 2 7 s_axi_arburst [1:0] $end
+$var wire 1 8 s_axi_arvalid $end
+$var reg 1 ^ s_axi_arready $end
+$var reg 32 _ s_axi_rdata [31:0] $end
+$var reg 2 ` s_axi_rresp [1:0] $end
+$var reg 1 a s_axi_rlast $end
+$var reg 3 b pprot [2:0] $end
+$var reg 32 c pwdata [31:0] $end
+$var reg 4 d pstrb [3:0] $end
+$var wire 32 R prdata [31:0] $end
+$var wire 1 T pslverr $end
+$var reg 4 e state [3:0] $end
+$var reg 5 f timeout_cnt [4:0] $end
+$var reg 8 g burst_len_reg [7:0] $end
+$var reg 3 h burst_size_reg [2:0] $end
+$var reg 2 i burst_type_reg [1:0] $end
+$var reg 8 j burst_cnt [7:0] $end
+$var reg 1 k err_latch $end
+$var reg 4 l target_psel_reg [3:0] $end
+$var wire 1 m awaddr_in_range $end
+$var wire 1 n araddr_in_range $end
+$var wire 4 o aw_device_sel [3:0] $end
+$var wire 4 p ar_device_sel [3:0] $end
+
+$scope task _$$txp_fail_action_unnamed$$_39 $end
+$upscope $end
+
+
+$scope task _$$txp_fail_action_unnamed$$_40 $end
+$upscope $end
+
+$upscope $end
+
+
+$scope module u_sram_0 $end
+$var wire 1 " PCLK $end
+$var wire 1 # PRESETn $end
+$var wire 1 q PSEL $end
+$var wire 1 B PENABLE $end
+$var wire 1 C PWRITE $end
+$var wire 12 r PADDR [11:0] $end
+$var wire 32 D PWDATA [31:0] $end
+$var reg 32 s PRDATA [31:0] $end
+$var wire 1 J PREADY $end
+$var wire 1 N PSLVERR $end
+$var wire 1 t apb_access $end
+$var wire 1 u hit_pslverr_addr $end
+$var wire 1 v hit_timeout_addr $end
+$upscope $end
+
+
+$scope module u_sram_1 $end
+$var wire 1 " PCLK $end
+$var wire 1 # PRESETn $end
+$var wire 1 w PSEL $end
+$var wire 1 B PENABLE $end
+$var wire 1 C PWRITE $end
+$var wire 12 r PADDR [11:0] $end
+$var wire 32 D PWDATA [31:0] $end
+$var reg 32 x PRDATA [31:0] $end
+$var wire 1 K PREADY $end
+$var wire 1 O PSLVERR $end
+$var wire 1 y apb_access $end
+$var wire 1 z hit_pslverr_addr $end
+$var wire 1 { hit_timeout_addr $end
+$upscope $end
+
+
+$scope module u_sram_2 $end
+$var wire 1 " PCLK $end
+$var wire 1 # PRESETn $end
+$var wire 1 | PSEL $end
+$var wire 1 B PENABLE $end
+$var wire 1 C PWRITE $end
+$var wire 12 r PADDR [11:0] $end
+$var wire 32 D PWDATA [31:0] $end
+$var reg 32 } PRDATA [31:0] $end
+$var wire 1 L PREADY $end
+$var wire 1 P PSLVERR $end
+$var wire 1 ~ apb_access $end
+$var wire 1 "! hit_pslverr_addr $end
+$var wire 1 "" hit_timeout_addr $end
+$upscope $end
+
+
+$scope module u_sram_3 $end
+$var wire 1 " PCLK $end
+$var wire 1 # PRESETn $end
+$var wire 1 "# PSEL $end
+$var wire 1 B PENABLE $end
+$var wire 1 C PWRITE $end
+$var wire 12 r PADDR [11:0] $end
+$var wire 32 D PWDATA [31:0] $end
+$var reg 32 "$ PRDATA [31:0] $end
+$var wire 1 M PREADY $end
+$var wire 1 Q PSLVERR $end
+$var wire 1 "% apb_access $end
+$var wire 1 "& hit_pslverr_addr $end
+$var wire 1 "' hit_timeout_addr $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+1n
+1m
+0k
+0u
+0v
+0B
+1S
+1J
+1K
+1L
+1M
+0T
+0N
+0O
+0P
+0Q
+0C
+0q
+0w
+0|
+0"#
+0"%
+0~
+0y
+0t
+0Y
+0Z
+0^
+0[
+0U
+0a
+0V
+0\
+0z
+0{
+0"!
+0""
+0"&
+0"'
+b00000000000000000000000000000000 s
+b0001 p
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx !
+b0001 o
+b00000000 j
+b00000000 g
+b000 h
+b00 i
+b00000000000000000000000000000000 ?
+b000 @
+b00000000000000000000000000000000 R
+b00000000000000000000000000000000 F
+b00000000000000000000000000000000 G
+b00000000000000000000000000000000 H
+b00000000000000000000000000000000 I
+b0000 A
+b0000 E
+b00000000000000000000000000000000 D
+b0000 e
+b0000 l
+b000000000000 r
+b00000 f
+b00000000000000000000000000000000 W
+b000 b
+b0000 X
+b0000 d
+b00000000000000000000000000000000 c
+b00 ]
+b00000000000000000000000000000000 _
+b00 `
+b00000000000000000000000000000000 x
+b00000000000000000000000000000000 }
+b00000000000000000000000000000000 "$
+b00000000000000000000000000000000 $
+b00000000000000000000000000000000 3
+1"
+0#
+b000 %
+b00000000 &
+b010 '
+b01 (
+0)
+b00000000000000000000000000000000 +
+b0000 ,
+0-
+0.
+02
+b000 4
+b00000000 5
+b010 6
+b01 7
+08
+0>
+0*
+0/
+b00 0
+01
+09
+b00000000000000000000000000000000 :
+b00 ;
+0<
+0=
+$end
+#5000
+0"
+#10000
+1"
+#15000
+0"
+#20000
+1"
+#25000
+0"
+1#
+#30000
+1"
+#35000
+0"
+#40000
+1"
+#45000
+0"
+#50000
+1"
+1)
+b10101010101110111100110011011101 +
+b1111 ,
+1-
+1.
+#55000
+0"
+#60000
+1"
+1[
+1*
+1\
+1/
+b010 h
+b01 i
+b0001 l
+b0001 X
+b0001 A
+1q
+1Z
+1C
+b10101010101110111100110011011101 c
+b10101010101110111100110011011101 D
+b1111 d
+b1111 E
+b0001 e
+#65000
+0"
+#70000
+1"
+0)
+0.
+0-
+12
+0[
+0*
+0\
+0/
+1Y
+1B
+1t
+b0010 e
+#75000
+0"
+#80000
+1"
+0Y
+0B
+0t
+b0000 X
+b0000 A
+0q
+b0100 e
+#85000
+0"
+#90000
+1"
+1U
+11
+#95000
+0"
+#100000
+1"
+02
+0U
+01
+b0000 e
+#105000
+0"
+#110000
+1"
+18
+#115000
+0"
+#120000
+1"
+1^
+19
+b0001 X
+b0001 A
+1q
+0Z
+0C
+b00000000000000000000000000000000 c
+b00000000000000000000000000000000 D
+b0000 d
+b0000 E
+b0101 e
+#125000
+0"
+#130000
+1"
+08
+1>
+b10101010101110111100110011011101 s
+b10101010101110111100110011011101 F
+0^
+09
+1Y
+1B
+1t
+b0110 e
+b10101010101110111100110011011101 R
+#135000
+0"
+#140000
+1"
+0Y
+0B
+0t
+b0000 X
+b0000 A
+0q
+b10101010101110111100110011011101 _
+b10101010101110111100110011011101 :
+1a
+1<
+1V
+1=
+b0111 e
+b00000000000000000000000000000000 R
+#145000
+0"
+#150000
+1"
+0V
+0=
+0a
+0<
+b0000 e

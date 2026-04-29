@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777366077" />
+    <testcase classname="test_soc_system" file="/home/jjt/projects/AutoFlow2/tests/test_soc_system.py" lineno="345" name="test_apb_pslverr_injection" ratio_time="15870.788413904445" sim_time_ns="150.001" time="0.00945138931274414" />
+  </testsuite>
+</testsuites>

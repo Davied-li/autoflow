@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777366112" />
+    <testcase classname="test_soc_system" file="/home/jjt/projects/AutoFlow2/tests/test_soc_system.py" lineno="427" name="test_random_burst_stress" ratio_time="42054.3334627556" sim_time_ns="18720.001" time="0.44513845443725586" />
+  </testsuite>
+</testsuites>

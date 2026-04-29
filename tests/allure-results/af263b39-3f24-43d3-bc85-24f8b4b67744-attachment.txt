@@ -1,0 +1,195 @@
+[32mINFO    [0m cocotb:simulator.py:256 Running command: vcs -full64 -debug +vpi -P pli.tab -sverilog +define+COCOTB_SIM=1 -load /home/jjt/.local/lib/python3.6/site-packages/cocotb/libs/libcocotbvpi_vcs.so -timescale=1ns/1ps -debug_access+all /home/jjt/projects/AutoFlow2/rtl/axi_lite_to_apb_bridge.v /home/jjt/projects/AutoFlow2/rtl/apb_sram.v /home/jjt/projects/AutoFlow2/rtl/soc_system_top.v
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[DEBUG_DEP] Option will be deprecated
+[32mINFO    [0m cocotb:simulator.py:267   The option '-debug' will be deprecated in a future release.  Please use
+[32mINFO    [0m cocotb:simulator.py:267   '-debug_acc+pp+f+dmptf -debug_region+cell+encrypt' instead.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[DBGACC_DBG] Multiple debug options being used
+[32mINFO    [0m cocotb:simulator.py:267   The debug switches '-debug_access' and '-debug*' are being used together.
+[32mINFO    [0m cocotb:simulator.py:267   For better performance, consider using only '-debug_access'.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267                          Chronologic VCS (TM)
+[32mINFO    [0m cocotb:simulator.py:267          Version T-2022.06_Full64 -- Tue Apr 28 16:48:16 2026
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267                     Copyright (c) 1991 - 2022 Synopsys, Inc.
+[32mINFO    [0m cocotb:simulator.py:267    This software and the associated documentation are proprietary to Synopsys,
+[32mINFO    [0m cocotb:simulator.py:267  Inc. This software may only be used in accordance with the terms and conditions
+[32mINFO    [0m cocotb:simulator.py:267  of a written license agreement with Synopsys, Inc. All other use, reproduction,
+[32mINFO    [0m cocotb:simulator.py:267    or distribution of this software is strictly prohibited.  Licensed Products
+[32mINFO    [0m cocotb:simulator.py:267      communicate with Synopsys servers for the purpose of providing software
+[32mINFO    [0m cocotb:simulator.py:267     updates, detecting software piracy and verifying that customers are using
+[32mINFO    [0m cocotb:simulator.py:267     Licensed Products in conformity with the applicable License Key for such
+[32mINFO    [0m cocotb:simulator.py:267   Licensed Products. Synopsys will use information gathered in connection with
+[32mINFO    [0m cocotb:simulator.py:267     this process to deliver software updates and pursue software pirates and
+[32mINFO    [0m cocotb:simulator.py:267                                    infringers.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267  Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+[32mINFO    [0m cocotb:simulator.py:267             Inclusivity and Diversity" (Refer to article 000036315 at
+[32mINFO    [0m cocotb:simulator.py:267                         https://solvnetplus.synopsys.com)
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:78   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[VPI-CT-NS] VPI function is not supported
+[32mINFO    [0m cocotb:simulator.py:267   The VPI function 'vpi_register_cb' is not supported in the compiler.
+[32mINFO    [0m cocotb:simulator.py:267   Please fix the code being referred to by the '-load' compile option.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns ERROR    gpi                                ..b/vpi/VpiCbHdl.cpp:74   in arm_callback                    VPI: Unable to register a callback handle for VPI type cbStartOfSimulation(11)
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[VPI-CT-NS] VPI function is not supported
+[32mINFO    [0m cocotb:simulator.py:267   The VPI function 'vpi_chk_error' is not supported in the compiler.
+[32mINFO    [0m cocotb:simulator.py:267   Please fix the code being referred to by the '-load' compile option.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[VPI-CT-NS] VPI function is not supported
+[32mINFO    [0m cocotb:simulator.py:267   The VPI function 'vpi_register_cb' is not supported in the compiler.
+[32mINFO    [0m cocotb:simulator.py:267   Please fix the code being referred to by the '-load' compile option.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns ERROR    gpi                                ..b/vpi/VpiCbHdl.cpp:74   in arm_callback                    VPI: Unable to register a callback handle for VPI type cbEndOfSimulation(12)
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Warning-[VPI-CT-NS] VPI function is not supported
+[32mINFO    [0m cocotb:simulator.py:267   The VPI function 'vpi_chk_error' is not supported in the compiler.
+[32mINFO    [0m cocotb:simulator.py:267   Please fix the code being referred to by the '-load' compile option.
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 Parsing design file '/home/jjt/projects/AutoFlow2/rtl/axi_lite_to_apb_bridge.v'
+[32mINFO    [0m cocotb:simulator.py:267 Parsing design file '/home/jjt/projects/AutoFlow2/rtl/apb_sram.v'
+[32mINFO    [0m cocotb:simulator.py:267 Parsing design file '/home/jjt/projects/AutoFlow2/rtl/soc_system_top.v'
+[32mINFO    [0m cocotb:simulator.py:267 Top Level Modules:
+[32mINFO    [0m cocotb:simulator.py:267        soc_system_top
+[32mINFO    [0m cocotb:simulator.py:267 TimeScale is 1 ns / 1 ps
+[32mINFO    [0m cocotb:simulator.py:267 Starting vcs inline pass...
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 1 module and 0 UDP read.
+[32mINFO    [0m cocotb:simulator.py:267 recompiling module soc_system_top
+[32mINFO    [0m cocotb:simulator.py:267 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+[32mINFO    [0m cocotb:simulator.py:267 if [ -x ../simv ]; then chmod a-x ../simv; fi
+[32mINFO    [0m cocotb:simulator.py:267 g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/home/jjt/install/synopsys/vcs/vcs/T-2022.06/linux64/lib -L/home/jjt/install/synopsys/vcs/vcs/T-2022.06/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _8651_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /home/jjt/install/synopsys/vcs/vcs/T-2022.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /home/jjt/install/synopsys/vcs/vcs/T-2022.06/linux64/lib/vcs_save_restore_new.o /home/jjt/install/synopsys/verdi/verdi/T-2022.06/share/PLI/VCS/LINUX64/pli.a -ldl -lm  -lc -lpthread -ldl
+[32mINFO    [0m cocotb:simulator.py:267 ../simv up to date
+[32mINFO    [0m cocotb:simulator.py:267 CPU time: .409 seconds to compile + .285 seconds to elab + .253 seconds to link
+[32mINFO    [0m cocotb:simulator.py:256 Running command: /home/jjt/projects/AutoFlow2/tests/sim_build/test_random_burst_stress/simv +define+COCOTB_SIM=1
+[32mINFO    [0m cocotb:simulator.py:267 Chronologic VCS simulator copyright 1991-2022
+[32mINFO    [0m cocotb:simulator.py:267 Contains Synopsys proprietary information.
+[32mINFO    [0m cocotb:simulator.py:267 Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Apr 28 16:48 2026
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:78   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+[32mINFO    [0m cocotb:simulator.py:267      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+[32mINFO    [0m cocotb:simulator.py:267      0.00ns INFO     cocotb                             Running on Chronologic Simulation VCS Release version T-2022.06_Full64
+[32mINFO    [0m cocotb:simulator.py:267      0.00ns INFO     cocotb                             Running tests with cocotb v1.7.1 from /home/jjt/.local/lib/python3.6/site-packages/cocotb
+[32mINFO    [0m cocotb:simulator.py:267      0.00ns INFO     cocotb                             Seeding Python random module with 1777366112
+[32mINFO    [0m cocotb:simulator.py:267      0.00ns INFO     cocotb.regression                  Found test test_soc_system.test_random_burst_stress
+[32mINFO    [0m cocotb:simulator.py:267     40.00ns INFO     cocotb.soc_system_top              Random stress seed = 20260428
+[32mINFO    [0m cocotb:simulator.py:267     40.00ns INFO     cocotb.soc_system_top              [Iter 000] Addr=0x000011E0, Len=4, Data=['0xf4343920', '0xaaee074c', '0xdaea38f8', '0xeb68156e']
+[32mINFO    [0m cocotb:simulator.py:267    330.00ns INFO     cocotb.soc_system_top              [Iter 001] Addr=0x000009E4, Len=3, Data=['0xe5cc9c82', '0x8f105260', '0x8d254c21']
+[32mINFO    [0m cocotb:simulator.py:267    560.00ns INFO     cocotb.soc_system_top              [Iter 002] Addr=0x0000184C, Len=4, Data=['0xd08f414a', '0xf27f2a18', '0xa8f8326b', '0x4c6ecbd8']
+[32mINFO    [0m cocotb:simulator.py:267    850.00ns INFO     cocotb.soc_system_top              [Iter 003] Addr=0x00001AE8, Len=1, Data=['0x582770ca']
+[32mINFO    [0m cocotb:simulator.py:267    960.00ns INFO     cocotb.soc_system_top              [Iter 004] Addr=0x00003CD0, Len=2, Data=['0x34a1f739', '0x455cd911']
+[32mINFO    [0m cocotb:simulator.py:267   1130.00ns INFO     cocotb.soc_system_top              [Iter 005] Addr=0x00001058, Len=1, Data=['0xc3f7efa7']
+[32mINFO    [0m cocotb:simulator.py:267   1240.00ns INFO     cocotb.soc_system_top              [Iter 006] Addr=0x00001A50, Len=3, Data=['0x55cf9a90', '0xaf9fb340', '0x854c8c7b']
+[32mINFO    [0m cocotb:simulator.py:267   1470.00ns INFO     cocotb.soc_system_top              [Iter 007] Addr=0x00003E9C, Len=2, Data=['0xfdcf7231', '0xc482e500']
+[32mINFO    [0m cocotb:simulator.py:267   1640.00ns INFO     cocotb.soc_system_top              [Iter 008] Addr=0x0000321C, Len=3, Data=['0x7cf4a4f', '0xd1e4b885', '0x21e768bf']
+[32mINFO    [0m cocotb:simulator.py:267   1870.00ns INFO     cocotb.soc_system_top              [Iter 009] Addr=0x00002A08, Len=4, Data=['0xe65cea01', '0x1a7c8c90', '0x3cb21f41', '0xaaad94f6']
+[32mINFO    [0m cocotb:simulator.py:267   2160.00ns INFO     cocotb.soc_system_top              [Iter 010] Addr=0x00000DDC, Len=2, Data=['0x8fb668a8', '0x663dd551']
+[32mINFO    [0m cocotb:simulator.py:267   2330.00ns INFO     cocotb.soc_system_top              [Iter 011] Addr=0x00003AE8, Len=3, Data=['0xf5c5a197', '0x5acfec04', '0xaf8e4a5e']
+[32mINFO    [0m cocotb:simulator.py:267   2560.00ns INFO     cocotb.soc_system_top              [Iter 012] Addr=0x000028DC, Len=1, Data=['0x8e77c584']
+[32mINFO    [0m cocotb:simulator.py:267   2670.00ns INFO     cocotb.soc_system_top              [Iter 013] Addr=0x00000EF0, Len=2, Data=['0xfdf50c3a', '0x50a62b73']
+[32mINFO    [0m cocotb:simulator.py:267   2840.00ns INFO     cocotb.soc_system_top              [Iter 014] Addr=0x00001524, Len=4, Data=['0x7350a532', '0x88a0eea4', '0xc27b50d9', '0x79ce9cb4']
+[32mINFO    [0m cocotb:simulator.py:267   3130.00ns INFO     cocotb.soc_system_top              [Iter 015] Addr=0x00000A3C, Len=4, Data=['0x99c3ec75', '0x570221a5', '0x650582b3', '0xf2c3469b']
+[32mINFO    [0m cocotb:simulator.py:267   3420.00ns INFO     cocotb.soc_system_top              [Iter 016] Addr=0x0000350C, Len=4, Data=['0x31e0bd67', '0x8d0d596e', '0xed6a2fdf', '0x233d278d']
+[32mINFO    [0m cocotb:simulator.py:267   3710.00ns INFO     cocotb.soc_system_top              [Iter 017] Addr=0x00000AA4, Len=1, Data=['0x23881fe1']
+[32mINFO    [0m cocotb:simulator.py:267   3820.00ns INFO     cocotb.soc_system_top              [Iter 018] Addr=0x00001C94, Len=1, Data=['0xcd196aff']
+[32mINFO    [0m cocotb:simulator.py:267   3930.00ns INFO     cocotb.soc_system_top              [Iter 019] Addr=0x000019FC, Len=2, Data=['0x8f0c7547', '0x4dc9f462']
+[32mINFO    [0m cocotb:simulator.py:267   4100.00ns INFO     cocotb.soc_system_top              [Iter 020] Addr=0x000011E8, Len=2, Data=['0xbf25fe34', '0xbefca405']
+[32mINFO    [0m cocotb:simulator.py:267   4270.00ns INFO     cocotb.soc_system_top              [Iter 021] Addr=0x00000754, Len=1, Data=['0x88a346bb']
+[32mINFO    [0m cocotb:simulator.py:267   4380.00ns INFO     cocotb.soc_system_top              [Iter 022] Addr=0x00001D84, Len=1, Data=['0xcf496f21']
+[32mINFO    [0m cocotb:simulator.py:267   4490.00ns INFO     cocotb.soc_system_top              [Iter 023] Addr=0x00000E10, Len=3, Data=['0x7947d4c1', '0x88390253', '0x55cd74bf']
+[32mINFO    [0m cocotb:simulator.py:267   4720.00ns INFO     cocotb.soc_system_top              [Iter 024] Addr=0x00002920, Len=4, Data=['0x3f51f183', '0x3336389b', '0x9467f832', '0x670ce9fe']
+[32mINFO    [0m cocotb:simulator.py:267   5010.00ns INFO     cocotb.soc_system_top              [Iter 025] Addr=0x00003A6C, Len=2, Data=['0x55b89a30', '0xa571b3f8']
+[32mINFO    [0m cocotb:simulator.py:267   5180.00ns INFO     cocotb.soc_system_top              [Iter 026] Addr=0x00000E44, Len=3, Data=['0xabeab44', '0xd0fa0e0a', '0x5ba016b7']
+[32mINFO    [0m cocotb:simulator.py:267   5410.00ns INFO     cocotb.soc_system_top              [Iter 027] Addr=0x00001054, Len=3, Data=['0x135a08d', '0xeff0219f', '0x51b1d8c6']
+[32mINFO    [0m cocotb:simulator.py:267   5640.00ns INFO     cocotb.soc_system_top              [Iter 028] Addr=0x00000774, Len=3, Data=['0x83d82e3b', '0xeddb465a', '0xc1d109b7']
+[32mINFO    [0m cocotb:simulator.py:267   5870.00ns INFO     cocotb.soc_system_top              [Iter 029] Addr=0x00000C14, Len=4, Data=['0x1523afe1', '0x25e0cf3e', '0x294d02bb', '0x3449826e']
+[32mINFO    [0m cocotb:simulator.py:267   6160.00ns INFO     cocotb.soc_system_top              [Iter 030] Addr=0x00002800, Len=2, Data=['0x6017e49e', '0x8d9e8338']
+[32mINFO    [0m cocotb:simulator.py:267   6330.00ns INFO     cocotb.soc_system_top              [Iter 031] Addr=0x00000154, Len=1, Data=['0x45b5dcb4']
+[32mINFO    [0m cocotb:simulator.py:267   6440.00ns INFO     cocotb.soc_system_top              [Iter 032] Addr=0x0000265C, Len=2, Data=['0x704e2b9a', '0x47b180c5']
+[32mINFO    [0m cocotb:simulator.py:267   6610.00ns INFO     cocotb.soc_system_top              [Iter 033] Addr=0x00002CA4, Len=2, Data=['0x4ed874ee', '0xb00a8cb3']
+[32mINFO    [0m cocotb:simulator.py:267   6780.00ns INFO     cocotb.soc_system_top              [Iter 034] Addr=0x000038B0, Len=3, Data=['0xe299b28a', '0x65ef3cd5', '0x2804e0a2']
+[32mINFO    [0m cocotb:simulator.py:267   7010.00ns INFO     cocotb.soc_system_top              [Iter 035] Addr=0x00002584, Len=2, Data=['0x267caf2d', '0x147b296']
+[32mINFO    [0m cocotb:simulator.py:267   7180.00ns INFO     cocotb.soc_system_top              [Iter 036] Addr=0x0000264C, Len=2, Data=['0x14f754b6', '0x6c1f8edf']
+[32mINFO    [0m cocotb:simulator.py:267   7350.00ns INFO     cocotb.soc_system_top              [Iter 037] Addr=0x00003528, Len=2, Data=['0x7311e551', '0x3c50e6d7']
+[32mINFO    [0m cocotb:simulator.py:267   7520.00ns INFO     cocotb.soc_system_top              [Iter 038] Addr=0x00002F18, Len=4, Data=['0xaaaf1740', '0xabd7553f', '0xa0a721b6', '0x9452bcd5']
+[32mINFO    [0m cocotb:simulator.py:267   7810.00ns INFO     cocotb.soc_system_top              [Iter 039] Addr=0x000013B8, Len=1, Data=['0xf77f7601']
+[32mINFO    [0m cocotb:simulator.py:267   7920.00ns INFO     cocotb.soc_system_top              [Iter 040] Addr=0x00000124, Len=1, Data=['0xeea68389']
+[32mINFO    [0m cocotb:simulator.py:267   8030.00ns INFO     cocotb.soc_system_top              [Iter 041] Addr=0x00002890, Len=2, Data=['0xa1ad22b7', '0x76b28088']
+[32mINFO    [0m cocotb:simulator.py:267   8200.00ns INFO     cocotb.soc_system_top              [Iter 042] Addr=0x0000022C, Len=1, Data=['0x6d1f9dc7']
+[32mINFO    [0m cocotb:simulator.py:267   8310.00ns INFO     cocotb.soc_system_top              [Iter 043] Addr=0x0000362C, Len=4, Data=['0x188efacd', '0x5fbb5cd', '0xc6abb483', '0x86376b08']
+[32mINFO    [0m cocotb:simulator.py:267   8600.00ns INFO     cocotb.soc_system_top              [Iter 044] Addr=0x00000090, Len=1, Data=['0x9dedaf16']
+[32mINFO    [0m cocotb:simulator.py:267   8710.00ns INFO     cocotb.soc_system_top              [Iter 045] Addr=0x000037D0, Len=1, Data=['0xc272f156']
+[32mINFO    [0m cocotb:simulator.py:267   8820.00ns INFO     cocotb.soc_system_top              [Iter 046] Addr=0x00003C1C, Len=2, Data=['0xb5a75168', '0xa270cdb3']
+[32mINFO    [0m cocotb:simulator.py:267   8990.00ns INFO     cocotb.soc_system_top              [Iter 047] Addr=0x00001B20, Len=1, Data=['0x9ac55686']
+[32mINFO    [0m cocotb:simulator.py:267   9100.00ns INFO     cocotb.soc_system_top              [Iter 048] Addr=0x00001F68, Len=2, Data=['0x485cc6b6', '0x7850e4b1']
+[32mINFO    [0m cocotb:simulator.py:267   9270.00ns INFO     cocotb.soc_system_top              [Iter 049] Addr=0x000000A8, Len=4, Data=['0x2c2f93cd', '0x8b3cd15e', '0xbdba1301', '0x161a5481']
+[32mINFO    [0m cocotb:simulator.py:267   9560.00ns INFO     cocotb.soc_system_top              [Iter 050] Addr=0x00003EB8, Len=1, Data=['0x8f40995f']
+[32mINFO    [0m cocotb:simulator.py:267   9670.00ns INFO     cocotb.soc_system_top              [Iter 051] Addr=0x00001B48, Len=1, Data=['0xe9201b79']
+[32mINFO    [0m cocotb:simulator.py:267   9780.00ns INFO     cocotb.soc_system_top              [Iter 052] Addr=0x00001A84, Len=3, Data=['0x122daca7', '0x621a45d1', '0x7528369e']
+[32mINFO    [0m cocotb:simulator.py:267  10010.00ns INFO     cocotb.soc_system_top              [Iter 053] Addr=0x00003280, Len=3, Data=['0x834613a1', '0x9399ad20', '0xc20e1765']
+[32mINFO    [0m cocotb:simulator.py:267  10240.00ns INFO     cocotb.soc_system_top              [Iter 054] Addr=0x00002320, Len=1, Data=['0xb167d55c']
+[32mINFO    [0m cocotb:simulator.py:267  10350.00ns INFO     cocotb.soc_system_top              [Iter 055] Addr=0x00003DFC, Len=2, Data=['0x74914b5', '0x573a6b3f']
+[32mINFO    [0m cocotb:simulator.py:267  10520.00ns INFO     cocotb.soc_system_top              [Iter 056] Addr=0x000026A8, Len=2, Data=['0xf8ba626e', '0x916c28a9']
+[32mINFO    [0m cocotb:simulator.py:267  10690.00ns INFO     cocotb.soc_system_top              [Iter 057] Addr=0x00003F18, Len=3, Data=['0x99684a6a', '0xa342caa6', '0x630ed48f']
+[32mINFO    [0m cocotb:simulator.py:267  10920.00ns INFO     cocotb.soc_system_top              [Iter 058] Addr=0x00003BE4, Len=3, Data=['0x19ac202f', '0x63c459e', '0xeea94f50']
+[32mINFO    [0m cocotb:simulator.py:267  11150.00ns INFO     cocotb.soc_system_top              [Iter 059] Addr=0x00001E04, Len=2, Data=['0xb0397413', '0xe5ab326e']
+[32mINFO    [0m cocotb:simulator.py:267  11320.00ns INFO     cocotb.soc_system_top              [Iter 060] Addr=0x00001F18, Len=4, Data=['0xec4f4971', '0xd49d3a2c', '0xda8ce006', '0xbd2d491b']
+[32mINFO    [0m cocotb:simulator.py:267  11610.00ns INFO     cocotb.soc_system_top              [Iter 061] Addr=0x00000A24, Len=2, Data=['0x7c748e59', '0xb3e6555e']
+[32mINFO    [0m cocotb:simulator.py:267  11780.00ns INFO     cocotb.soc_system_top              [Iter 062] Addr=0x00003350, Len=1, Data=['0x732a2c7f']
+[32mINFO    [0m cocotb:simulator.py:267  11890.00ns INFO     cocotb.soc_system_top              [Iter 063] Addr=0x00001814, Len=2, Data=['0x1b4900b6', '0xc448997b']
+[32mINFO    [0m cocotb:simulator.py:267  12060.00ns INFO     cocotb.soc_system_top              [Iter 064] Addr=0x00000EC0, Len=2, Data=['0x3a174676', '0x93f11d22']
+[32mINFO    [0m cocotb:simulator.py:267  12230.00ns INFO     cocotb.soc_system_top              [Iter 065] Addr=0x00000E04, Len=1, Data=['0xccf7d286']
+[32mINFO    [0m cocotb:simulator.py:267  12340.00ns INFO     cocotb.soc_system_top              [Iter 066] Addr=0x000038F4, Len=2, Data=['0x612f6351', '0x341dc6aa']
+[32mINFO    [0m cocotb:simulator.py:267  12510.00ns INFO     cocotb.soc_system_top              [Iter 067] Addr=0x00003BD4, Len=2, Data=['0x1d7badf4', '0xbd8272e0']
+[32mINFO    [0m cocotb:simulator.py:267  12680.00ns INFO     cocotb.soc_system_top              [Iter 068] Addr=0x00003E70, Len=2, Data=['0x3958410c', '0xea8ef28a']
+[32mINFO    [0m cocotb:simulator.py:267  12850.00ns INFO     cocotb.soc_system_top              [Iter 069] Addr=0x00000748, Len=2, Data=['0xd502aec5', '0x73f474db']
+[32mINFO    [0m cocotb:simulator.py:267  13020.00ns INFO     cocotb.soc_system_top              [Iter 070] Addr=0x000002D4, Len=2, Data=['0x26640847', '0xa2a6acae']
+[32mINFO    [0m cocotb:simulator.py:267  13190.00ns INFO     cocotb.soc_system_top              [Iter 071] Addr=0x000003A0, Len=3, Data=['0xcb36760', '0x41c9f9ff', '0xa19189c0']
+[32mINFO    [0m cocotb:simulator.py:267  13420.00ns INFO     cocotb.soc_system_top              [Iter 072] Addr=0x000000C8, Len=2, Data=['0xc470b962', '0x64fc4238']
+[32mINFO    [0m cocotb:simulator.py:267  13590.00ns INFO     cocotb.soc_system_top              [Iter 073] Addr=0x00002E0C, Len=2, Data=['0x4e173b59', '0x811de28d']
+[32mINFO    [0m cocotb:simulator.py:267  13760.00ns INFO     cocotb.soc_system_top              [Iter 074] Addr=0x00000570, Len=2, Data=['0x916a82f2', '0x76118b56']
+[32mINFO    [0m cocotb:simulator.py:267  13930.00ns INFO     cocotb.soc_system_top              [Iter 075] Addr=0x000018C0, Len=4, Data=['0x98a403b1', '0xfdf75881', '0xf0bf8b4a', '0xa34109ee']
+[32mINFO    [0m cocotb:simulator.py:267  14220.00ns INFO     cocotb.soc_system_top              [Iter 076] Addr=0x00001BBC, Len=3, Data=['0xc9819982', '0xcdbc7bde', '0xab7cfc96']
+[32mINFO    [0m cocotb:simulator.py:267  14450.00ns INFO     cocotb.soc_system_top              [Iter 077] Addr=0x00001670, Len=2, Data=['0x37271568', '0x63764bb6']
+[32mINFO    [0m cocotb:simulator.py:267  14620.00ns INFO     cocotb.soc_system_top              [Iter 078] Addr=0x00002854, Len=2, Data=['0x71ce2b77', '0x86bb4184']
+[32mINFO    [0m cocotb:simulator.py:267  14790.00ns INFO     cocotb.soc_system_top              [Iter 079] Addr=0x00002020, Len=2, Data=['0x6f840f82', '0xef08c647']
+[32mINFO    [0m cocotb:simulator.py:267  14960.00ns INFO     cocotb.soc_system_top              [Iter 080] Addr=0x00003734, Len=1, Data=['0x377e4876']
+[32mINFO    [0m cocotb:simulator.py:267  15070.00ns INFO     cocotb.soc_system_top              [Iter 081] Addr=0x0000361C, Len=2, Data=['0x38b1a55d', '0xd7344d1a']
+[32mINFO    [0m cocotb:simulator.py:267  15240.00ns INFO     cocotb.soc_system_top              [Iter 082] Addr=0x000036A4, Len=1, Data=['0x73dc0b6b']
+[32mINFO    [0m cocotb:simulator.py:267  15350.00ns INFO     cocotb.soc_system_top              [Iter 083] Addr=0x00003AE0, Len=4, Data=['0x356cd9ce', '0xa075e4b3', '0x91fbebab', '0x24f92721']
+[32mINFO    [0m cocotb:simulator.py:267  15640.00ns INFO     cocotb.soc_system_top              [Iter 084] Addr=0x00001578, Len=4, Data=['0x2ac26ed2', '0x4a33ca55', '0x1c41fca5', '0x210630f7']
+[32mINFO    [0m cocotb:simulator.py:267  15930.00ns INFO     cocotb.soc_system_top              [Iter 085] Addr=0x000015C8, Len=4, Data=['0x8dca83fe', '0x9dcf7e79', '0x27d504e9', '0xd8290552']
+[32mINFO    [0m cocotb:simulator.py:267  16220.00ns INFO     cocotb.soc_system_top              [Iter 086] Addr=0x00000214, Len=2, Data=['0x19cecc7a', '0x2c722578']
+[32mINFO    [0m cocotb:simulator.py:267  16390.00ns INFO     cocotb.soc_system_top              [Iter 087] Addr=0x00003E50, Len=4, Data=['0xc801dd01', '0x36a84724', '0x6cc65bfa', '0x77719319']
+[32mINFO    [0m cocotb:simulator.py:267  16680.00ns INFO     cocotb.soc_system_top              [Iter 088] Addr=0x00001610, Len=1, Data=['0x726d4bda']
+[32mINFO    [0m cocotb:simulator.py:267  16790.00ns INFO     cocotb.soc_system_top              [Iter 089] Addr=0x00001A5C, Len=1, Data=['0xcdfe6de7']
+[32mINFO    [0m cocotb:simulator.py:267  16900.00ns INFO     cocotb.soc_system_top              [Iter 090] Addr=0x000012C8, Len=3, Data=['0x753dbc73', '0x8dd81ac1', '0x7bbf98b8']
+[32mINFO    [0m cocotb:simulator.py:267  17130.00ns INFO     cocotb.soc_system_top              [Iter 091] Addr=0x0000370C, Len=3, Data=['0xdce0c759', '0x3a63ecfc', '0x41884223']
+[32mINFO    [0m cocotb:simulator.py:267  17360.00ns INFO     cocotb.soc_system_top              [Iter 092] Addr=0x00000C28, Len=2, Data=['0x5ca413b3', '0x91b0d559']
+[32mINFO    [0m cocotb:simulator.py:267  17530.00ns INFO     cocotb.soc_system_top              [Iter 093] Addr=0x00001DCC, Len=2, Data=['0x9cc183c4', '0xf73d5bd5']
+[32mINFO    [0m cocotb:simulator.py:267  17700.00ns INFO     cocotb.soc_system_top              [Iter 094] Addr=0x0000129C, Len=3, Data=['0xb3bb401f', '0x46c5369', '0x4314243']
+[32mINFO    [0m cocotb:simulator.py:267  17930.00ns INFO     cocotb.soc_system_top              [Iter 095] Addr=0x00002AF8, Len=2, Data=['0xfbc998fb', '0x84a40d58']
+[32mINFO    [0m cocotb:simulator.py:267  18100.00ns INFO     cocotb.soc_system_top              [Iter 096] Addr=0x00000DBC, Len=2, Data=['0x905657a', '0x5c547f80']
+[32mINFO    [0m cocotb:simulator.py:267  18270.00ns INFO     cocotb.soc_system_top              [Iter 097] Addr=0x00002588, Len=2, Data=['0x5d726c29', '0x6de526a1']
+[32mINFO    [0m cocotb:simulator.py:267  18440.00ns INFO     cocotb.soc_system_top              [Iter 098] Addr=0x00000ADC, Len=1, Data=['0x2534e4d1']
+[32mINFO    [0m cocotb:simulator.py:267  18550.00ns INFO     cocotb.soc_system_top              [Iter 099] Addr=0x000030CC, Len=2, Data=['0xf8cf6d0b', '0xc767bb72']
+[32mINFO    [0m cocotb:simulator.py:267  18720.00ns INFO     cocotb.soc_system_top              Stress test completed. 100 iterations passed.
+[32mINFO    [0m cocotb:simulator.py:267  18720.00ns INFO     cocotb.regression                  test_random_burst_stress passed
+[32mINFO    [0m cocotb:simulator.py:267  18720.00ns INFO     cocotb.regression                  **************************************************************************************************
+[32mINFO    [0m cocotb:simulator.py:267                                                         ** TEST                                      STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+[32mINFO    [0m cocotb:simulator.py:267                                                         **************************************************************************************************
+[32mINFO    [0m cocotb:simulator.py:267                                                         ** test_soc_system.test_random_burst_stress   PASS       18720.00           0.45      42054.33  **
+[32mINFO    [0m cocotb:simulator.py:267                                                         **************************************************************************************************
+[32mINFO    [0m cocotb:simulator.py:267                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                          18720.00           0.62      30415.14  **
+[32mINFO    [0m cocotb:simulator.py:267                                                         **************************************************************************************************
+[32mINFO    [0m cocotb:simulator.py:267 
+[32mINFO    [0m cocotb:simulator.py:267 $finish at simulation time             18720001
+[32mINFO    [0m cocotb:simulator.py:267            V C S   S i m u l a t i o n   R e p o r t
+[32mINFO    [0m cocotb:simulator.py:267 Time: 18720001 ps
+[32mINFO    [0m cocotb:simulator.py:267 CPU Time:      0.900 seconds;       Data structure size:   8.0Mb
+[32mINFO    [0m cocotb:simulator.py:267 Tue Apr 28 16:48:33 2026

@@ -1,0 +1,199 @@
+--- a/rtl/apb_sram.v
++++ b/rtl/apb_sram.v
+@@ -1,6 +1,12 @@
+ module apb_sram #(
+     parameter ADDR_WIDTH = 8,
+-    parameter DATA_WIDTH = 32
++    parameter DATA_WIDTH = 32,
++    // 故障注入开关：默认关闭，避免影响普通 SRAM 行为
++    parameter ENABLE_PSLVERR = 0,
++    parameter ENABLE_TIMEOUT = 0,
++    // APB 局部地址触发点。全局地址由 soc_system_top 的 slave base 决定
++    parameter [ADDR_WIDTH-1:0] PSLVERR_ADDR = 12'hF00,
++    parameter [ADDR_WIDTH-1:0] TIMEOUT_ADDR = 12'hF04
+ )(
+     input  wire                  PCLK,
+     input  wire                  PRESETn,
+@@ -18,13 +24,25 @@
+     localparam DEPTH = 1 << ADDR_WIDTH;
+     reg [DATA_WIDTH-1:0] mem [0:DEPTH-1];
+ 
+-    // APB3 0-wait state 握手与错误响应控制
+-    assign PREADY  = 1'b1;
+-    assign PSLVERR = 1'b0;
++    // ------------------------------------------------------------------
++    // 故障注入逻辑
++    // ------------------------------------------------------------------
++    // 在 APB Access 阶段触发，避免 Setup 阶段误报。
++    wire apb_access = PSEL && PENABLE;
+ 
+-    // 写逻辑：在 Access 阶段采样并写入阵列
++    // 访问 PSLVERR_ADDR：从机立即返回 PSLVERR=1，模拟从设备内部错误。
++    wire hit_pslverr_addr = ENABLE_PSLVERR && apb_access && (PADDR == PSLVERR_ADDR);
++
++    // 访问 TIMEOUT_ADDR：从机持续不拉高 PREADY，模拟外设无响应。
++    // Bridge 内部 TIMEOUT_CYCLES 到达后应强制结束并返回 AXI SLVERR。
++    wire hit_timeout_addr = ENABLE_TIMEOUT && apb_access && (PADDR == TIMEOUT_ADDR);
++
++    assign PREADY  = hit_timeout_addr ? 1'b0 : 1'b1;
++    assign PSLVERR = hit_pslverr_addr;
++
++    // 写逻辑：只在 Access 阶段且 PREADY=1、无错误时真正写入阵列
+     always @(posedge PCLK) begin
+-        if (PSEL && PENABLE && PWRITE) begin
++        if (PSEL && PENABLE && PREADY && PWRITE && !PSLVERR) begin
+             mem[PADDR] <= PWDATA;
+         end
+     end
+@@ -34,8 +52,14 @@
+         if (!PRESETn) begin
+             PRDATA <= {DATA_WIDTH{1'b0}};
+         end else if (PSEL && !PWRITE) begin
+-            PRDATA <= mem[PADDR];
++            if (ENABLE_PSLVERR && (PADDR == PSLVERR_ADDR)) begin
++                PRDATA <= {DATA_WIDTH{1'b0}};
++            end else if (ENABLE_TIMEOUT && (PADDR == TIMEOUT_ADDR)) begin
++                PRDATA <= {DATA_WIDTH{1'b0}};
++            end else begin
++                PRDATA <= mem[PADDR];
++            end
+         end
+     end
+ 
+-endmodule
+\ No newline at end of file
++endmodule
+--- a/rtl/soc_system_top.v
++++ b/rtl/soc_system_top.v
+@@ -140,7 +140,17 @@
+     );
+ 
+     // slave3: 0x3000 ~ 0x3FFF
+-    apb_sram #(.ADDR_WIDTH(12), .DATA_WIDTH(32)) u_sram_3 (
++    // 额外打开故障注入：
++    //   0x3F00 -> APB PSLVERR 注入
++    //   0x3F04 -> APB PREADY timeout 注入
++    apb_sram #(
++        .ADDR_WIDTH(12),
++        .DATA_WIDTH(32),
++        .ENABLE_PSLVERR(1),
++        .ENABLE_TIMEOUT(1),
++        .PSLVERR_ADDR(12'hF00),
++        .TIMEOUT_ADDR(12'hF04)
++    ) u_sram_3 (
+         .PCLK(clk), .PRESETn(rst_n),
+         .PSEL(psel[3]), .PENABLE(penable), .PWRITE(pwrite),
+         .PADDR(paddr[11:0]), .PWDATA(pwdata), .PRDATA(prdata_3),
+--- a/tests/test_soc_system.py
++++ b/tests/test_soc_system.py
+@@ -8,6 +8,8 @@
+ 4. 随机测试 seed 固定，失败可复现
+ 5. Multi-Slave 地址空间覆盖
+ 6. 非法地址异常响应验证
++7. APB PSLVERR 错误注入验证
++8. APB PREADY timeout 超时验证
+ """
+ 
+ import os
+@@ -338,7 +340,89 @@
+ 
+ 
+ # ==============================================================================
+-# 测试用例 5：受限随机压力测试
++# 测试用例 5：APB PSLVERR 错误注入
++# ==============================================================================
++@cocotb.test()
++async def test_apb_pslverr_injection(dut):
++    """
++    访问 slave3 内部保留故障地址 0x3F00。
++
++    预期行为：
++    - APB SRAM 在 Access 阶段返回 PSLVERR=1；
++    - Bridge 捕获 PSLVERR；
++    - AXI 写返回 BRESP=SLVERR；
++    - AXI 读返回 RRESP=SLVERR。
++    """
++    cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
++    await reset_dut(dut)
++
++    fault_addr = 0x3F00
++
++    dut._log.info("Testing APB PSLVERR injection at addr=0x%08X" % fault_addr)
++
++    bresp = await axi_write_burst(
++        dut,
++        fault_addr,
++        [0x12345678],
++        burst_type=1,
++        expected_resp=RESP_SLVERR,
++    )
++    assert bresp == RESP_SLVERR, "PSLVERR write should return AXI SLVERR"
++
++    read_data = await axi_read_burst(
++        dut,
++        fault_addr,
++        1,
++        burst_type=1,
++        expected_resp=RESP_SLVERR,
++    )
++    assert read_data == [0], "PSLVERR read data should be 0. Act=%s" % read_data
++
++
++# ==============================================================================
++# 测试用例 6：APB PREADY timeout 超时注入
++# ==============================================================================
++@cocotb.test()
++async def test_apb_pready_timeout(dut):
++    """
++    访问 slave3 内部保留故障地址 0x3F04。
++
++    预期行为：
++    - APB SRAM 持续 PREADY=0；
++    - Bridge 等待 TIMEOUT_CYCLES 后强制结束 APB 访问；
++    - AXI 写返回 BRESP=SLVERR；
++    - AXI 读返回 RRESP=SLVERR。
++    """
++    cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
++    await reset_dut(dut)
++
++    timeout_addr = 0x3F04
++
++    dut._log.info("Testing APB PREADY timeout injection at addr=0x%08X" % timeout_addr)
++
++    bresp = await axi_write_burst(
++        dut,
++        timeout_addr,
++        [0xCAFEBABE],
++        burst_type=1,
++        expected_resp=RESP_SLVERR,
++        timeout_cycles=DEFAULT_TIMEOUT_CYCLES,
++    )
++    assert bresp == RESP_SLVERR, "Timeout write should return AXI SLVERR"
++
++    read_data = await axi_read_burst(
++        dut,
++        timeout_addr,
++        1,
++        burst_type=1,
++        expected_resp=RESP_SLVERR,
++        timeout_cycles=DEFAULT_TIMEOUT_CYCLES,
++    )
++    assert read_data == [0], "Timeout read data should be 0. Act=%s" % read_data
++
++
++# ==============================================================================
++# 测试用例 7：受限随机压力测试
+ # ==============================================================================
+ @cocotb.test()
+ async def test_random_burst_stress(dut):
+--- a/tests/test_runner.py
++++ b/tests/test_runner.py
+@@ -9,6 +9,8 @@
+     ("test_incr_burst", 20260428),
+     ("test_multislave_decode", 20260428),
+     ("test_invalid_address_error", 20260428),
++    ("test_apb_pslverr_injection", 20260428),
++    ("test_apb_pready_timeout", 20260428),
+     ("test_random_burst_stress", 20260428),
+ ]
+ 

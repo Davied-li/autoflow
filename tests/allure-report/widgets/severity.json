@@ -1,0 +1,81 @@
+[ {
+  "uid" : "c84182d9a500b1ed",
+  "name" : "test_soc_bridge[test_incr_burst]",
+  "time" : {
+    "start" : 1777366001982,
+    "stop" : 1777366026344,
+    "duration" : 24362
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "53ede45ce24aadb0",
+  "name" : "test_soc_bridge[test_invalid_address_error]",
+  "time" : {
+    "start" : 1777366037535,
+    "stop" : 1777366049845,
+    "duration" : 12310
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2657380fe8e5f908",
+  "name" : "test_soc_bridge[test_multislave_decode]",
+  "time" : {
+    "start" : 1777366026348,
+    "stop" : 1777366037531,
+    "duration" : 11183
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1d955de36ae6ce56",
+  "name" : "test_soc_bridge[test_apb_pready_timeout]",
+  "time" : {
+    "start" : 1777366077634,
+    "stop" : 1777366095394,
+    "duration" : 17760
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d40a16a2924c156e",
+  "name" : "test_soc_bridge[test_random_burst_stress]",
+  "time" : {
+    "start" : 1777366095398,
+    "stop" : 1777366113252,
+    "duration" : 17854
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "71cdcb94e6c71de",
+  "name" : "test_soc_bridge[test_apb_pslverr_injection]",
+  "time" : {
+    "start" : 1777366049849,
+    "stop" : 1777366077631,
+    "duration" : 27782
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d47bab281c21b880",
+  "name" : "Project Overview - AutoFlow AXI-APB Bridge Verification",
+  "time" : {
+    "start" : 1777365974391,
+    "stop" : 1777365974392,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "acf57199cdb667a4",
+  "name" : "test_soc_bridge[test_single_transfer]",
+  "time" : {
+    "start" : 1777365974395,
+    "stop" : 1777366001977,
+    "duration" : 27582
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

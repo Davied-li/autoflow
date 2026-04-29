@@ -1,0 +1,99 @@
+{
+  "uid" : "acf57199cdb667a4",
+  "name" : "test_soc_bridge[test_single_transfer]",
+  "fullName" : "test_runner#test_soc_bridge",
+  "historyId" : "eb623dad9f76bbc7a1bd774cdb9e2193",
+  "time" : {
+    "start" : 1777365974395,
+    "stop" : 1777366001977,
+    "duration" : 27582
+  },
+  "description" : "\n    AutoFlow AXI-APB Bridge 自动化回归入口。\n\n    功能：\n    1. pytest 参数化调度 testcase；\n    2. cocotb-test 调用 VCS 仿真；\n    3. 每个 testcase 使用独立 sim_build；\n    4. 自动归档 VCD 波形；\n    5. 自动生成 SVG 波形图；\n    6. 自动挂载模块结构图到 Allure 报告。\n    ",
+  "descriptionHtml" : "<pre><code>AutoFlow AXI-APB Bridge 自动化回归入口。\n\n功能：\n1. pytest 参数化调度 testcase；\n2. cocotb-test 调用 VCS 仿真；\n3. 每个 testcase 使用独立 sim_build；\n4. 自动归档 VCD 波形；\n5. 自动生成 SVG 波形图；\n6. 自动挂载模块结构图到 Allure 报告。\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n    AutoFlow AXI-APB Bridge 自动化回归入口。\n\n    功能：\n    1. pytest 参数化调度 testcase；\n    2. cocotb-test 调用 VCS 仿真；\n    3. 每个 testcase 使用独立 sim_build；\n    4. 自动归档 VCD 波形；\n    5. 自动生成 SVG 波形图；\n    6. 自动挂载模块结构图到 Allure 报告。\n    ",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "28ef94f096d37f8",
+      "name" : "VCD Waveform - test_single_transfer",
+      "source" : "28ef94f096d37f8.txt",
+      "type" : "text/plain",
+      "size" : 8723
+    }, {
+      "uid" : "fc123a89e58ee849",
+      "name" : "Waveform SVG - test_single_transfer",
+      "source" : "fc123a89e58ee849.svg",
+      "type" : "image/svg-xml",
+      "size" : 7764
+    }, {
+      "uid" : "bedff8e782c55e90",
+      "name" : "Module Diagram - AXI-APB Bridge",
+      "source" : "bedff8e782c55e90.svg",
+      "type" : "image/svg-xml",
+      "size" : 4463
+    }, {
+      "uid" : "4b3b8d9a6a863927",
+      "name" : "log",
+      "source" : "4b3b8d9a6a863927.txt",
+      "type" : "text/plain",
+      "size" : 11097
+    }, {
+      "uid" : "ad52be6ea269531d",
+      "name" : "stdout",
+      "source" : "ad52be6ea269531d.txt",
+      "type" : "text/plain",
+      "size" : 101
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 5,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_runner"
+  }, {
+    "name" : "host",
+    "value" : "localhost.localdomain"
+  }, {
+    "name" : "thread",
+    "value" : "3427-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_runner"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "seed",
+    "value" : "20260428"
+  }, {
+    "name" : "test_name",
+    "value" : "'test_single_transfer'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "acf57199cdb667a4.json",
+  "parameterValues" : [ "20260428", "'test_single_transfer'" ]
+}
